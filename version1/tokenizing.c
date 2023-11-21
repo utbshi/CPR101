@@ -1,19 +1,10 @@
-#include <stdio.h>
-#include <string.h>
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#define BUFFER_SIZE 80
+#include "tokenizing.h" // Include the custom header file
 
-// Include the custom header file
-#include "tokenizing.h"
+// V1 
 
-// Main function where the program starts
-int main() {
-    // Call the tokenizing function
-    tokenizing();
-
-    // Indicate successful program execution
-    return 0;
-}
-
-// Function definition for the tokenizing module
 void tokenizing(void) {
     // Print a start message for the demo
     printf("*** Start of Tokenizing Words Demo ***\n");
@@ -25,10 +16,9 @@ void tokenizing(void) {
 
     // Keep asking for input until the user wants to quit
     do {
-        // Ask the user to type a few words separated by space (or 'q' to quit)
         printf("Type a few words separated by space (q - to quit):\n");
 
-        // Read the user's input
+        // gets the user's input
         fgets(words, BUFFER_SIZE, stdin);
 
         // Adjust the string length to remove the newline character
@@ -47,7 +37,7 @@ void tokenizing(void) {
             }
         }
 
-    } while (strcmp(words, "q") != 0);  // Continue until 'q' is entered
+    } while (strcmp(words, "q") != 0);  // Continues until 'q' is entered
 
     // Print an end message for the demo
     printf("*** End of Tokenizing Words Demo ***\n\n");
