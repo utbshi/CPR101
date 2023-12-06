@@ -63,7 +63,37 @@ void fundamentals()
     printf("*** End of Indexing Strings Demo ***\n");
 
     /* Version 2 */
- 
+
+    // Print the start message of the demo for measuring the lengths of strings
+    printf("*** Start of Measuring Strings Demo ***\n");
+
+    // Declare a character array to store the input string
+    char buffer2[BUFFER_SIZE];
+
+    // Loop to process input strings until the user decides to quit
+    do
+    {
+        // Prompt the user to type a string or 'q' to quit the demo
+        printf("Type a string (q - to quit):\n");
+
+        // Read the string from the user and store it in buffer2
+        fgets(buffer2, BUFFER_SIZE, stdin);
+
+        // Replace the newline character that fgets captures with a null terminator
+        buffer2[strlen(buffer2) - 1] = '\0';
+
+        // Check if the input string is not 'q', which is the quit command
+        if (strcmp(buffer2, "q") != 0)
+        {
+            // Print the length of the input string using strlen function
+            printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
+        }
+        // Continue the loop until 'q' is entered
+    } while (strcmp(buffer2, "q") != 0);
+
+    // Print the end message of the measuring strings demo
+    printf("*** End of Measuring Strings Demo ***\n");
+
     /* Version 3 */
     
 }
